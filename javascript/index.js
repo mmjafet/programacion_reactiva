@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         data.push(newTask);
+        imprimirDatos(listaDatos);
 
         // Limpiar el contenido de listaDatos antes de agregar las tareas
         listaDatos.innerHTML = '';
@@ -31,6 +32,34 @@ document.addEventListener("DOMContentLoaded", () => {
         taskDescriptionInput.value = '';
     });
 });
+const imprimirDatos = (listaDatos)=>{
+    data.map((taskItem) => {
+        const nuevoElemento = taskItem.status ?
+            `<div class="hero-card hero-card--complete">
+                <div class="card_task">
+                    <p>${taskItem.task}</p>
+                    <span>${taskItem.description}</span>
+                </div>
+                <div class="card_buttons">
+                    <button class="check" onClick="actualizar(${taskItem.id})"><i class="bi bi-check-circle"></i></button>
+                    <button class="delete" onClick="eliminar(${taskItem.id})"><i class="bi bi-trash"></i></button>
+                </div>
+            </div>` :
+            `<div class="hero-card">
+                <div class="card_task">
+                    <p>${taskItem.task}</p>
+                    <span>${taskItem.description}</span>
+                </div>
+                <div class="card_buttons">
+                    <button class="check" onClick="actualizar(${taskItem.id})"><i class="bi bi-check-lg"></i></button>
+                    <button class="delete" onClick="eliminar(${taskItem.id})"><i class="bi bi-trash"></i></button>
+                </div>
+            </div>`;
+        listaDatos.innerHTML += nuevoElemento;
+    });
+
+}
+
 
 const actualizar = (id) => {
     const newData = data.map((taskItem) => {
