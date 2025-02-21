@@ -21,18 +21,19 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         data.push(newTask);
-        imprimirDatos(listaDatos);
 
         // Limpiar el contenido de listaDatos antes de agregar las tareas
         listaDatos.innerHTML = '';
 
-        
+        imprimirDatos(listaDatos);
+
         // Limpiar los campos del formulario después de agregar la tarea
         taskInput.value = '';
         taskDescriptionInput.value = '';
     });
 });
-const imprimirDatos = (listaDatos)=>{
+
+const imprimirDatos = (listaDatos) => {
     data.map((taskItem) => {
         const nuevoElemento = taskItem.status ?
             `<div class="hero-card hero-card--complete">
@@ -57,9 +58,7 @@ const imprimirDatos = (listaDatos)=>{
             </div>`;
         listaDatos.innerHTML += nuevoElemento;
     });
-
 }
-
 
 const actualizar = (id) => {
     const newData = data.map((taskItem) => {
@@ -70,10 +69,13 @@ const actualizar = (id) => {
         }
     });
     data = newData;
+    document.getElementById("hero").innerHTML = '';
+    imprimirDatos(document.getElementById("hero"));
 };
-
 
 const eliminar = (id) => {
     const newData = data.filter(task => task.id !== id);
     data = newData;
+    document.getElementById("hero").innerHTML = '';
+    imprimirDatos(document.getElementById("hero"));
 };
