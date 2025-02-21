@@ -19,7 +19,7 @@ body {
 .nav{
     width: 100%;
     padding:12px;
-    background-color: #2b00a0;
+    background-color: #8865e7;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
     margin-bottom: 12px;
 }
@@ -47,7 +47,7 @@ body {
 }
 
 .form_title{
-    color: #2b00a0;
+    color: #9883d0;
     font-weight: bold;
     font-size: 2rem;
     margin: 0 auto;
@@ -62,7 +62,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 8px;
-    border : 1px solid #2b00a0;
+    border : 1px solid #7c5bd8;
     border-radius: 2px;
     box-shadow: 4px 0px 10px #2b00a056;
     
@@ -75,8 +75,8 @@ body {
     padding: 4px;
     font-size: 1.1rem;
     border: none;
-    border-bottom: 1px solid #2b00a0;
-    color: #2b00a0;
+    border-bottom: 1px solid #8a66ef;
+    color: #7457c6;
     border-radius: 4px;
     width: 80%;
     
@@ -93,10 +93,10 @@ body {
 }
 
 .form_button{
-    background-color: #3d04db;
+    background-color: #886dd2;
     color: aliceblue;
     padding: 8px;
-    border: 1px solid #3d04db;
+    border: 1px solid #7e58e5;
     border-radius:4px;
     font-weight: bold;
     font-size: 1.2rem;
@@ -107,7 +107,7 @@ body {
 }
 
 .form_button:hover{
-    color: #3d04db;
+    color: #665498;
     background-color: transparent;
     border-radius: 8px;
 }
