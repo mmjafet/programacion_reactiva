@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded",()=>{
                 </div>
                 <div class="card_buttons">
                     <button class="check" onClick"actualizar(${taskItem.id})"><i class="bi bi-check-circle"></i></button>
-                    <button class="delete"><i class="bi bi-trash"></i></button>
+                    <button class="delete"onClick"eliminar(${taskItem.id})"><i class="bi bi-trash"></i></button>
                 </div>
             </div>`:
             `<div class="hero-card">
