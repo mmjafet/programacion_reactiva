@@ -1,5 +1,5 @@
 var idCount = 1;
-const data = [];
+var data = [];
 
 document.addEventListener("DOMContentLoaded", () => {
     const formulario = document.getElementById("formulario");
