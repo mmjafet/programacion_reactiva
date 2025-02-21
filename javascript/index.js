@@ -48,10 +48,29 @@ document.addEventListener("DOMContentLoaded",()=>{
                 </div>
             </div>`;
             listaDatos.innerHTML += nuevoElemento;
-        });
+            });
+        };
 
         // Limpiar los campos del formulario después de agregar la tarea
         taskInput.value = '';
         taskDescriptionInput.value = '';
     });
+
 });
+
+
+const actualizar = (id)=>{  
+    const newData = data.map((taskItem)=>{
+        if(taskItem.id === id){
+            return{...task,status:!task.status};
+        }else{return task}
+        
+         
+    });
+    data = newData;
+});    
+      
+const eliminar = (id)=>{
+    const newData = data.map(task=>task.id !== id?null:task);
+    data = newData;
+};
